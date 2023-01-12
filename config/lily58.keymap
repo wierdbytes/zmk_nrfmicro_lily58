@@ -11,10 +11,15 @@
 / {
 	combos {
         compatible = "zmk,combos";
-        combo_esc {
+        combo_lower {
             timeout-ms = <50>;
             key-positions = <11 54>;
             bindings = <&tog LOWER>;
+        };
+		combo_raise {
+            timeout-ms = <50>;
+            key-positions = <0 53>;
+            bindings = <&tog RAISE>;
         };
     };
 
@@ -33,7 +38,7 @@
 &kp TAB    &kp Q   &kp W     &kp E     &kp R      &kp T                       &kp Y       &kp U     &kp I      &kp O    &kp P          &kp LBKT
 &kp LSHFT  &kp A   &kp S     &kp D     &kp F      &kp G                       &kp H       &kp J     &kp K      &kp L    &kp SEMICOLON  &kp APOSTROPHE
 &kp LCTRL  &kp Z   &kp X     &kp C     &kp V      &kp B  &kp EQUAL  &kp RBKT  &kp N       &kp M     &kp COMMA  &kp DOT  &kp FSLH       &kp ENTER
-                   &kp LALT  &kp LGUI  &kp SPACE  &mo LOWER                   &mo RAISE   &kp BSPC  &kp BSLH   &kp DEL
+                   &kp LALT  &kp LGUI  &kp SPACE  &lt LOWER CAPS              &mo RAISE   &kp BSPC  &kp BSLH   &kp DEL
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -41,17 +46,17 @@
 
 		lower_layer {
 // +-------------------------------------------------------------------------------------------------------------------------+
-// |  F1   |  F2   |  F3  |   F4   |  F5    |  F6   |                    | tog LOWER |       | NUMLK |   =   |   /   |   *   |
-// |  F7   |  F8   |  F9  |   F10  |  F11   |  F12  |                    |           |       |   7   |   8   |   9   |   -   |
-// |  CAPS |       |      | VOL_UP | VOL_DN |  MUTE |                    |           |       |   4   |   5   |   6   |   +   |
-// |  BT 0 |  BT 1 |      |        |        |       |  PGUP  |  |  PGDN  |           |   0   |   1   |   2   |   3   |  ⮐   |
-//                        | BT_CLR |        |       |        |  |        |           |       |   .   |
+// |  F1   |  F2   |  F3   |   F4   |  F5    |  F6   |                    | tog LOWER |       | NUMLK |   =   |   /   |   *   |
+// |  F7   |  F8   |  F9   |   F10  |  F11   |  F12  |                    |           |       |   7   |   8   |   9   |   -   |
+// |       |       |       | VOL_UP | VOL_DN |  MUTE |                    |           |       |   4   |   5   |   6   |   +   |
+// |       |  BT 0 |  BT 1 |        |        |       |  PGUP  |  |  PGDN  |           |   0   |   1   |   2   |   3   |  ⮐   |
+//                         |        |        |       |        |  |        |           |       |   .   |
 			bindings = <
 &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                               &tog LOWER   &trans      &kp KP_NLCK   &kp KP_EQUAL   &kp KP_DIVIDE   &kp KP_MULTIPLY
 &kp F7        &kp F8        &kp F9        &kp F10       &kp F11       &kp F12                              &trans       &trans      &kp KP_N7     &kp KP_N8      &kp KP_N9       &kp KP_MINUS
-&kp CAPS      &trans        &trans        &kp K_VOL_DN  &kp K_VOL_UP  &kp K_MUTE                           &trans       &trans      &kp KP_N4     &kp KP_N5      &kp KP_N6       &kp KP_PLUS
-&bt BT_SEL 0  &bt BT_SEL 1  &trans        &trans        &trans        &trans        &kp PG_UP   &kp PG_DN  &trans       &kp KP_N0   &kp KP_N1     &kp KP_N2      &kp KP_N3       &kp KP_ENTER
-                            &bt BT_CLR    &trans        &trans        &trans                               &trans       &trans      &trans        &kp KP_DOT
+&trans        &trans        &trans        &kp K_VOL_DN  &kp K_VOL_UP  &kp K_MUTE                           &trans       &trans      &kp KP_N4     &kp KP_N5      &kp KP_N6       &kp KP_PLUS
+&trans        &bt BT_SEL 0  &bt BT_SEL 1  &trans        &trans        &trans        &kp PG_UP   &kp PG_DN  &trans       &kp KP_N0   &kp KP_N1     &kp KP_N2      &kp KP_N3       &kp KP_ENTER
+                            &trans        &trans        &trans        &trans                               &trans       &trans      &trans        &kp KP_DOT
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -65,7 +70,7 @@
 // |       |     |     |      |      |      |        |  |       |      |       | PgDn  |       |       |       |
 //                     |      |      |      |        |  |       |      |       |       |
 			bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                   &trans    &trans     &kp PG_UP   &trans     &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &tog RAISE               &trans    &trans     &kp PG_UP   &trans     &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans                   &trans    &trans     &kp UP      &trans     &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans                   &kp HOME  &kp LEFT   &kp DOWN    &kp RIGHT  &kp END  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans    &kp END    &kp PG_DN   &trans     &trans   &trans
