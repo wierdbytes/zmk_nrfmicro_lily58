@@ -9,6 +9,22 @@
 #define RAISE 2
 
 / {
+	behaviors {
+        td_raise: tap_raise {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP RAISE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo RAISE>, <&tog RAISE>;
+        };
+		td_lower: tap_lower {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP LOWER";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo LOWER>, <&tog LOWER>;
+        };
+    };
 	combos {
         compatible = "zmk,combos";
 
@@ -68,7 +84,7 @@
 &kp TAB    &kp Q   &kp W     &kp E     &kp R           &kp T                       &kp Y       &kp U     &kp I      &kp O    &kp P          &kp LBKT
 &kp LSHFT  &kp A   &kp S     &kp D     &kp F           &kp G                       &kp H       &kp J     &kp K      &kp L    &kp SEMICOLON  &kp APOSTROPHE
 &kp LCTRL  &kp Z   &kp X     &kp C     &kp V           &kp B  &kp EQUAL  &kp RBKT  &kp N       &kp M     &kp COMMA  &kp DOT  &kp FSLH       &kp ENTER
-                   &kp LALT  &kp LGUI  &mt LGUI SPACE  &mo LOWER              &mo RAISE   &kp BSPC  &kp BSLH   &kp DEL
+                   &kp LALT  &kp LGUI  &mt LGUI SPACE  &td_lower                   &td_raise   &kp BSPC  &kp BSLH   &kp DEL
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
