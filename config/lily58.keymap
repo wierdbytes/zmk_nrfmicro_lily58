@@ -14,33 +14,33 @@
 
 		// Layers toggle 
         combo_raise_right {
-            timeout-ms = <50>;
-            key-positions = <54 11>;
+            timeout-ms = <150>;
+            key-positions = <11 54>;
             bindings = <&tog RAISE>;
         };
 		combo_lower_right {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <54 23>;
             bindings = <&tog LOWER>;
         };
 		combo_base_right {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <54 49>;
             bindings = <&to BASE>;
         };
 
 		combo_raise_left {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <53 0>;
             bindings = <&tog RAISE>;
         };
 		combo_lower_left {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <53 12>;
             bindings = <&tog LOWER>;
         };
 		combo_base_left {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <53 36>;
             bindings = <&to BASE>;
         };
@@ -48,7 +48,7 @@
 		// CAPS
 		combo_caps {
             timeout-ms = <150>;
-            key-positions = <253 24>;
+            key-positions = <24 53>;
             bindings = <&kp CAPS>;
         };
     };
