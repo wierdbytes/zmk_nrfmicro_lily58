@@ -47,8 +47,8 @@
 
 		// CAPS
 		combo_caps {
-            timeout-ms = <1000>;
-            key-positions = <53 24>;
+            timeout-ms = <150>;
+            key-positions = <253 24>;
             bindings = <&kp CAPS>;
         };
     };
@@ -100,7 +100,7 @@
 // |       |     |     |     |     |     |        |  |       |      |       | PgDn  |       |       |       |
 //                     |     |     |     |        |  |       |      |       |       |
 			bindings = <
-&trans  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N5  &kp KP_N6                        &trans    &trans     &kp PG_UP   &trans     &trans   &trans
+&trans  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N4  &kp KP_N5                      &trans    &trans     &kp PG_UP   &trans     &trans   &trans
 &trans  &kp KP_N6  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_N0                        &trans    &trans     &kp UP      &trans     &trans   &trans
 &trans  &trans     &trans     &trans     &trans     &trans                           &kp HOME  &kp LEFT   &kp DOWN    &kp RIGHT  &kp END  &trans
 &trans  &trans     &trans     &trans     &trans     &trans     &trans        &trans  &trans    &kp END    &kp PG_DN   &trans     &trans   &trans
