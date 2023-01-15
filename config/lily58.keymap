@@ -47,7 +47,7 @@
 
 		// CAPS
 		combo_caps {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <53 24>;
             bindings = <&kp CAPS>;
         };
