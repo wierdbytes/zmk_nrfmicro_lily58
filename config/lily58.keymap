@@ -14,14 +14,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_RAISE";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <1000>;
             bindings = <&mo RAISE>, <&tog RAISE>;
         };
 		td_lower: tap_lower {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_LOWER";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <1000>;
             bindings = <&mo LOWER>, <&tog LOWER>;
         };
     };
