@@ -10,64 +10,67 @@
 
 / {
 	behaviors {
-        td_raise: tap_raise {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_RAISE";
-            #binding-cells = <0>;
-            tapping-term-ms = <1000>;
-            bindings = <&mo RAISE>, <&tog RAISE>;
-        };
+		td_raise: tap_raise {
+			compatible = "zmk,behavior-tap-dance";
+			label = "TAP_RAISE";
+			#binding-cells = <0>;
+			tapping-term-ms = <1000>;
+			bindings = <&mo RAISE>, <&tog RAISE>;
+		};
 		td_lower: tap_lower {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_LOWER";
-            #binding-cells = <0>;
-            tapping-term-ms = <1000>;
-            bindings = <&mo LOWER>, <&tog LOWER>;
-        };
-    };
+			compatible = "zmk,behavior-tap-dance";
+			label = "TAP_LOWER";
+			#binding-cells = <0>;
+			tapping-term-ms = <1000>;
+			bindings = <&mo LOWER>, <&tog LOWER>;
+		};
+		td_caps: tap_caps {
+			compatible = "zmk,behavior-tap-dance";
+			label = "TAP_CAPS";
+			#binding-cells = <0>;
+			tapping-term-ms = <500>;
+			bindings = <&kp LSHFT>, <&kp CAPS>;
+		};
+	};
 	combos {
-        compatible = "zmk,combos";
+		compatible = "zmk,combos";
+
+		// BT combos
+		combo_bt_sel_0 {
+			timeout-ms = <50>;
+			key-positions = <37 53>; // Lower + 6
+			bindings = <&bt BT_SEL 0>;
+		};
+		combo_bt_sel_1 {
+			timeout-ms = <50>;
+			key-positions = <38 53>; // Lower + 7
+			bindings = <&bt BT_SEL 1>;
+		};
+		combo_bt_clr {
+			timeout-ms = <50>;
+			key-positions = <51 53>; // Lower + LGUI
+			bindings = <&bt BT_CLR>;
+		};
 
 		// Layers toggle 
-        combo_raise_right {
-            timeout-ms = <150>;
-            key-positions = <11 54>;
-            bindings = <&tog RAISE>;
-        };
-		combo_lower_right {
-            timeout-ms = <150>;
-            key-positions = <54 23>;
-            bindings = <&tog LOWER>;
-        };
 		combo_base_right {
-            timeout-ms = <150>;
-            key-positions = <54 49>;
-            bindings = <&to BASE>;
-        };
-
-		combo_raise_left {
-            timeout-ms = <150>;
-            key-positions = <53 0>;
-            bindings = <&tog RAISE>;
-        };
-		combo_lower_left {
-            timeout-ms = <150>;
-            key-positions = <53 12>;
-            bindings = <&tog LOWER>;
-        };
+			timeout-ms = <150>;
+			key-positions = <11 54>;
+			bindings = <&to BASE>;
+		};
 		combo_base_left {
-            timeout-ms = <150>;
-            key-positions = <53 36>;
-            bindings = <&to BASE>;
-        };
+			timeout-ms = <150>;
+			key-positions = <53 0>;
+			bindings = <&to BASE>;
+		};
 
 		// CAPS
 		combo_caps {
-            timeout-ms = <150>;
-            key-positions = <24 53>;
-            bindings = <&kp CAPS>;
-        };
-    };
+			timeout-ms = <150>;
+			key-positions = <24 53>;
+			bindings = <&kp CAPS>;
+		};
+	};
 
 	keymap {
 		compatible = "zmk,keymap";
@@ -84,43 +87,43 @@
 &kp TAB    &kp Q   &kp W     &kp E     &kp R           &kp T                       &kp Y       &kp U     &kp I      &kp O    &kp P          &kp LBKT
 &kp LSHFT  &kp A   &kp S     &kp D     &kp F           &kp G                       &kp H       &kp J     &kp K      &kp L    &kp SEMICOLON  &kp APOSTROPHE
 &kp LCTRL  &kp Z   &kp X     &kp C     &kp V           &kp B  &kp EQUAL  &kp RBKT  &kp N       &kp M     &kp COMMA  &kp DOT  &kp FSLH       &kp ENTER
-                   &kp LALT  &kp LGUI  &mt LGUI SPACE  &td_lower                   &td_raise   &kp BSPC  &kp BSLH   &kp DEL
+				   &kp LALT  &kp LGUI  &mt LGUI SPACE  &td_lower                   &td_raise   &kp BSPC  &kp BSLH   &kp DEL
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
 
 		lower_layer {
-// +-------------------------------------------------------------------------------------------------------------------------+
-// |  F1   |  F2   |  F3   |   F4   |  F5    |  F6   |                    |           |       | NUMLK |   =   |   /   |   *   |
-// |  F7   |  F8   |  F9   |   F10  |  F11   |  F12  |                    |           |       |   7   |   8   |   9   |   -   |
-// |       |       |       | VOL_UP | VOL_DN |  MUTE |                    |           |       |   4   |   5   |   6   |   +   |
-// |       |  BT 0 |  BT 1 |        |        |       |  PGUP  |  |  PGDN  |           |   0   |   1   |   2   |   3   |  ⮐   |
-//                         |        |        |       |        |  |        |           |       |   .   |
+// +------------------------------------------------------------------------------------------------------------------------+
+// |  F1   |  F2   |  F3   |  F4   |  F5   |  F6   |                    |          |        | NUMLK |   =   |   /   |   *   |
+// |  F7   |  F8   |  F9   |  F10  |  F11  |  F12  |                    |          |        |   7   |   8   |   9   |   -   |
+// |       |   1   |   2   |   3   |   4   |   5   |                    |          |        |   4   |   5   |   6   |   +   |
+// |       |   6   |   7   |   8   |   9   |   0   |  PGUP  |  |  PGDN  |          |    0   |   1   |   2   |   3   |  ⮐   |
+//                         |       |       |       |        |  |        |          |        |   .   |
 			bindings = <
-&kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                               &trans       &trans      &kp KP_NLCK   &kp KP_EQUAL   &kp KP_DIVIDE   &kp KP_MULTIPLY
-&kp F7        &kp F8        &kp F9        &kp F10       &kp F11       &kp F12                              &trans       &trans      &kp KP_N7     &kp KP_N8      &kp KP_N9       &kp KP_MINUS
-&trans        &trans        &trans        &kp K_VOL_DN  &kp K_VOL_UP  &kp K_MUTE                           &trans       &trans      &kp KP_N4     &kp KP_N5      &kp KP_N6       &kp KP_PLUS
-&trans        &bt BT_SEL 0  &bt BT_SEL 1  &trans        &trans        &trans        &kp PG_UP   &kp PG_DN  &trans       &kp KP_N0   &kp KP_N1     &kp KP_N2      &kp KP_N3       &kp KP_ENTER
-                            &trans        &trans        &trans        &trans                               &trans       &trans      &trans        &kp KP_DOT
+&kp F1  &kp F2     &kp F3     &kp F4     &kp F5     &kp F6                               &trans  &trans     &kp KP_NLCK  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY
+&kp F7  &kp F8     &kp F9     &kp F10    &kp F11    &kp F12                              &trans  &trans     &kp KP_N7    &kp KP_N8     &kp KP_N9      &kp KP_MINUS
+&trans  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N4  &kp KP_N5                            &trans  &trans     &kp KP_N4    &kp KP_N5     &kp KP_N6      &kp KP_PLUS
+&trans  &kp KP_N6  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp K      &kp PG_UP      &kp PG_DN  &trans  &kp KP_N0  &kp KP_N1    &kp KP_N2     &kp KP_N3      &kp KP_ENTER
+		           &trans     &trans     &trans     &trans                               &trans  &trans     &trans       &kp KP_DOT
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
 
 		raise_layer {
-// +--------------------------------------------------------------------------------------------------------+
-// |       |  1  |  2  |  3  |  4  |  5  |                   |      |       | PgUp  |       |       |       |
-// |       |  6  |  7  |  8  |  9  |  0  |                   |      |       |   ^   |       |       |       |
-// |       |     |     |     |     |     |                   | Home |   <-  |   v   |  ->   |  End  |       |
-// |       |     |     |     |     |     |        |  |       |      |       | PgDn  |       |       |       |
-//                     |     |     |     |        |  |       |      |       |       |
+// +------------------------------------------------------------------------------------------------------------+
+// |       |     |     |     |     |     |                   |  VOL_UP  |  PLAY | PgUp  |       |       |       |
+// |       |     |     |     |     |     |                   |  VOL_DN  |  NEXT |   ^   |       |       |       |
+// |       |     |     |     |     |     |                   |   Home   |   <-  |   v   |  ->   |  End  |       |
+// |       |     |     |     |     |     |        |  |       |          |       | PgDn  |       |       |       |
+//                     |     |     |     |        |  |       |          |       |       |
 			bindings = <
-&trans  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N4  &kp KP_N5                        &trans    &trans     &kp PG_UP   &trans     &trans   &trans
-&trans  &kp KP_N6  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_N0                        &trans    &trans     &kp UP      &trans     &trans   &trans
-&trans  &trans     &trans     &trans     &trans     &trans                           &kp HOME  &kp LEFT   &kp DOWN    &kp RIGHT  &kp END  &trans
-&trans  &trans     &trans     &trans     &trans     &trans     &trans        &trans  &trans    &kp END    &kp PG_DN   &trans     &trans   &trans
-                   &trans     &trans     &trans     &trans                           &trans    &trans     &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                        &kp K_VOL_UP  &kp C_PP    &kp PG_UP   &trans     &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                        &kp K_VOL_DN  &kp C_NEXT  &kp UP      &trans     &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                        &kp HOME      &kp LEFT    &kp DOWN    &kp RIGHT  &kp END  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans        &kp END     &kp PG_DN   &trans     &trans   &trans
+				&trans  &trans  &trans  &trans                        &trans        &trans      &trans      &trans
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
