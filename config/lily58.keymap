@@ -60,35 +60,35 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_dsk_1";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             bindings = <&kp GO_DSK_1>, <&kp MV_DKS_1>;
         };
         td_dsk_2: td_dsk_2 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_dsk_2";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             bindings = <&kp GO_DSK_2>, <&kp MV_DKS_2>;
         };
         td_dsk_3: td_dsk_3 {
             compatible = "zmk,behavior-tap-dance";
             label = "td_dsk_3";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             bindings = <&kp GO_DSK_3>, <&kp MV_DKS_3>;
         };
         td_m: td_m {
             compatible = "zmk,behavior-tap-dance";
             label = "td_m";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             bindings = <&kp M>, <&kp LA(M)>;
         };
         td_i: td_i {
             compatible = "zmk,behavior-tap-dance";
             label = "td_i";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             bindings = <&kp I>, <&kp LA(I)>;
         };
     };
