@@ -227,7 +227,7 @@
                 &trans  &trans       &trans       &trans        &trans        &trans                              &trans        &trans        &trans         &trans        &trans        &trans
                 &trans  &kp MY_DOLL  &kp MY_HASH  &kp SQUOTE    &kp DQUOTE    &kp MY_AT                           &kp MY_RCURL  &kp MY_LCURL  &kp MY_EXMARK  &kp MY_QMARK  &kp CIR_FLEX  &kp DEL_WORD
                 &trans  &trans       &trans       &kp MY_DOT    &kp MY_COM    &kp MY_MIN                          &kp MY_RSQBR  &kp MY_LSQBR  &kp MY_PLS     &kp MY_ASTER  &kp MY_EQUAL  &kp MY_PRC
-                &trans  &trans       &trans       &kp MY_SMCOL  &kp MY_COLON  &kp MY_UNDER  &trans        &trans  &kp MY_RBRKT  &kp MY_LBRKT  &kp MY_RANBR   &kp MY_LANBR  &trans        &kp MY_BSLH
+                &trans  &trans       &trans       &kp MY_SMCOL  &kp MY_COLON  &kp MY_UNDER  &trans        &trans  &kp MY_RBRKT  &kp MY_LBRKT  &kp MY_RANBR   &kp MY_LANBR  &kp MY_BSLH   &trans
                                      &trans       &trans        &trans        &trans                              &trans        &trans        &trans         &trans
             >;
 
