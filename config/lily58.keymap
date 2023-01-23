@@ -42,7 +42,7 @@
 #define MY_ASTER    LS(N7)        // remaped *
 #define MY_UNDER    LS(N8)        // remaped _
 #define MY_EQUAL    LS(N9)        // remaped =
-#define MY_BSLH     LS(N0)        // remaped \
+#define MY_BSLH     LS(N0)        // remaped backslash
 
 #define CIR_FLEX    LA(N6)        // remaped ^
 
@@ -147,7 +147,7 @@
                 &mt LALT TAB  &kp Q   &kp W  &kp E        &kp R           &kp T                          &kp Y          &kp U            &kp td_i      &kp O      &kp P          &kp BSPC
                 &kp LSHFT     &kp A   &kp S  &kp D        &kp F           &kp G                          &kp H          &kp J            &kp K         &kp L      &kp SEMICOLON  &kp APOSTROPHE
                 &kp LCTRL     &kp Z   &kp X  &kp C        &kp V           &kp B        &none      &none  &kp N          &kp td_m         &kp COMMA     &kp DOT    &kp EQUAL      &kp FSLH
-                                    &none  &lt M1 BSLH  &mt LGUI SPACE  &lt M2 MY_DOT                    &lt M3 MY_COM  &mt LSHFT ENTER  &lt M4 N8     &none
+                                      &none  &lt M1 BSLH  &mt LGUI SPACE  &lt M2 MY_DOT                  &lt M3 MY_COM  &mt LSHFT ENTER  &lt M4 N8     &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
