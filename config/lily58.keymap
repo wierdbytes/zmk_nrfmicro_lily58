@@ -189,7 +189,7 @@
             //                                  |          |          |          |          |  |          |          |          |          |
             bindings = <
                 &trans       &trans     &trans     &trans     &trans     &trans                         &trans   &trans  &trans    &trans  &trans    &trans
-                &kp HYP_ESC  &kp HYP_Q  &kp HYP_W  &kp HYP_E  &kp HYP_R  &kp HYP_T                      &kp F10  &kp F1  &kp F2    &kp F3  &trans    &trans
+                &kp ESC      &kp HYP_Q  &kp HYP_W  &kp HYP_E  &kp HYP_R  &kp HYP_T                      &kp F10  &kp F1  &kp F2    &kp F3  &trans    &trans
                 &trans       &kp HYP_A  &kp HYP_S  &kp HYP_D  &kp HYP_F  &kp HYP_G                      &kp F11  &kp F4  &kp F5    &kp F6  &trans    &trans
                 &trans       &kp HYP_Z  &kp HYP_X  &kp HYP_C  &kp HYP_V  &kp HYP_B  &trans      &trans  &kp F12  &kp F7  &kp F8    &kp F9  &trans    &trans
                                         &trans     &trans     &trans     &trans                         &trans   &trans  &trans    &trans
