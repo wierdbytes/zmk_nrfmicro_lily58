@@ -161,7 +161,7 @@
             // |          |          |          |          |          |          |          |  |          |          |          |          |          |          |          |
             //                                  |          |          |          |          |  |          |          |          |          |
             bindings = <
-                &trans   &trans  &trans         &trans      &trans          &trans                         &tans    &trans  &trans    &trans  &trans    &trans
+                &trans   &trans  &trans         &trans      &trans          &trans                         &trans   &trans  &trans    &trans  &trans    &trans
                 &kp ESC  &trans  &trans         &kp EXPAND  &trans          &td_dsk_1                      &kp F10  &kp F1  &kp F2    &kp F3  &trans    &trans
                 &trans   &trans  &kp HALF_LEFT  &trans      &kp HALF_RIGHT  &td_dsk_2                      &kp F11  &kp F4  &kp F5    &kp F6  &trans    &trans
                 &trans   &trans  &trans         &trans      &trans          &td_dsk_3  &trans      &trans  &kp F12  &kp F7  &kp F8    &kp F9  &trans    &trans
