@@ -5,7 +5,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 // timeout for tap-dance
-#define TD_TIMEOUT 150
+#define TD_TIMEOUT         150
+#define TD_TIMEOUT_LONG    500
 
 #define BASE 0
 #define M1   1
@@ -92,7 +93,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_m1_ctrl";
             #binding-cells = <0>;
-            tapping-term-ms = <TD_TIMEOUT>;
+            tapping-term-ms = <TD_TIMEOUT_LONG>;
             bindings = <&mo M2>, <&kp LCTRL>;
         };
         td_dsk_1: td_dsk_1 {
