@@ -147,7 +147,7 @@
                 &mt LALT TAB  &kp Q   &kp W  &kp E        &kp R           &kp T                          &kp Y          &kp U            &td_i         &kp O      &kp P          &kp BSPC
                 &kp LSHFT     &kp A   &kp S  &kp D        &kp F           &kp G                          &kp H          &kp J            &kp K         &kp L      &kp SEMICOLON  &kp APOSTROPHE
                 &kp LCTRL     &kp Z   &kp X  &kp C        &kp V           &kp B        &none      &none  &kp N          &td_m            &kp COMMA     &kp DOT    &kp EQUAL      &kp FSLH
-                                      &none  &lt M1 BSLH  &mt LGUI SPACE  &lt M2 MY_DOT                  &lt M3 MY_COM  &mt LSHFT ENTER  &lt M4 N8     &none
+                                      &none  &lt M1 BSLH  &mt LGUI SPACE  &lt M2 MY_DOT                  &lt M3 MY_COM  &lt M4 ENTER     &mt LSHFT N8  &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -197,11 +197,11 @@
             // |          |          |          |          |          |          |          |  |          |          |          |          |          |          |          |
             //                                  |          |          |          |          |  |          |          |          |          |
             bindings = <
-                &trans  &trans       &trans  &trans  &trans      &trans                             &trans        &trans        &trans        &trans        &trans        &trans
-                &trans  &kp MY_DOLL  &trans  &trans  &kp SQUOTE  &kp MY_HASH                        &kp MY_RCURL  &kp MY_LCURL  &kp MY_EXMARK    &kp MY_QMARK     &kp CIR_FLEX  &kp DEL_WORD
-                &trans  &trans       &trans  &trans  &kp DQUOTE  &kp MY_AT                          &kp MY_RSQBR  &kp MY_LSQBR  &kp MY_PLS    &kp MY_ASTER  &kp MY_EQUAL  &kp MY_PRC
-                &trans  &trans       &trans  &trans  &trans      &trans       &trans        &trans  &kp MY_RBRKT  &kp MY_LBRKT  &kp MY_RANBR  &kp MY_LANBR  &trans        &kp MY_BSLH
-                                     &trans  &trans  &trans      &trans                             &trans        &trans        &trans        &trans
+                &trans  &trans       &trans  &trans  &trans        &trans                              &trans        &trans        &trans        &trans        &trans        &trans
+                &trans  &kp MY_DOLL  &trans  &trans  &kp SQUOTE    &kp MY_HASH                         &kp MY_RCURL  &kp MY_LCURL  &kp MY_EXMARK    &kp MY_QMARK     &kp CIR_FLEX  &kp DEL_WORD
+                &trans  &trans       &trans  &trans  &kp DQUOTE    &kp MY_AT                           &kp MY_RSQBR  &kp MY_LSQBR  &kp MY_PLS    &kp MY_ASTER  &kp MY_EQUAL  &kp MY_PRC
+                &trans  &trans       &trans  &trans  &kp MY_SMCOL  &kp MY_COLON  &trans        &trans  &kp MY_RBRKT  &kp MY_LBRKT  &kp MY_RANBR  &kp MY_LANBR  &trans        &kp MY_BSLH
+                                     &trans  &trans  &trans        &trans                              &trans        &trans        &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -216,9 +216,9 @@
             //                                  |          |          |          |          |  |          |          |          |          |
             bindings = <
                 &trans  &trans  &trans  &trans  &trans  &trans                        &trans        &trans      &trans     &trans     &trans     &trans
-                &trans  &trans  &trans  &trans  &trans  &trans                        &trans        &trans      &trans     &trans     &trans     &trans
-                &trans  &trans  &trans  &trans  &trans  &trans                        &trans        &trans      &trans     &kp UP     &trans     &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans        &trans      &kp LEFT   &kp DOWN   &kp RIGHT  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans                        &trans        &trans      &kp UP     &trans     &trans     &trans
+                &trans  &trans  &trans  &trans  &trans  &trans                        &trans        &kp LEFT    &kp DOWN   &kp RIGHT  &trans     &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans        &trans      &trans     &trans      &trans     &trans
                                 &trans  &trans  &trans  &trans                        &trans        &trans      &trans     &trans
             >;
 
