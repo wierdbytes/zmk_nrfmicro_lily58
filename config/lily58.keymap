@@ -25,8 +25,8 @@
 
 #define SQUOTE      N1            // remaped '
 #define DQUOTE      N2            // remaped "
-#define QMARK       N3            // remaped ?
-#define EXMARK      N4            // remaped !
+#define MY_QMARK    N3            // remaped ?
+#define MY_EXMARK   N4            // remaped !
 #define MY_DOT      N5            // remaped .
 #define MY_COM      N6            // remaped ,
 #define MY_PLS      N7            // remaped +
@@ -198,7 +198,7 @@
             //                                  |          |          |          |          |  |          |          |          |          |
             bindings = <
                 &trans  &trans       &trans  &trans  &trans      &trans                             &trans        &trans        &trans        &trans        &trans        &trans
-                &trans  &kp MY_DOLL  &trans  &trans  &kp SQUOTE  &kp MY_HASH                        &kp MY_RCURL  &kp MY_LCURL  &kp EXMARK    &kp QMARK     &kp CIR_FLEX  &kp DEL_WORD
+                &trans  &kp MY_DOLL  &trans  &trans  &kp SQUOTE  &kp MY_HASH                        &kp MY_RCURL  &kp MY_LCURL  &kp MY_EXMARK    &kp MY_QMARK     &kp CIR_FLEX  &kp DEL_WORD
                 &trans  &trans       &trans  &trans  &kp DQUOTE  &kp MY_AT                          &kp MY_RSQBR  &kp MY_LSQBR  &kp MY_PLS    &kp MY_ASTER  &kp MY_EQUAL  &kp MY_PRC
                 &trans  &trans       &trans  &trans  &trans      &trans       &trans        &trans  &kp MY_RBRKT  &kp MY_LBRKT  &kp MY_RANBR  &kp MY_LANBR  &trans        &kp MY_BSLH
                                      &trans  &trans  &trans      &trans                             &trans        &trans        &trans        &trans
