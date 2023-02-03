@@ -59,22 +59,22 @@
 #define MY_RANBR    LA(RBKT)      // remaped >
 
 #define HYPER(key) LC(LS(LA(LG(key))))
-#define HYP_ESC   HYPER(ESC)
-#define HYP_Q     HYPER(Q)
-#define HYP_W     HYPER(W)
-#define HYP_E     HYPER(E)
-#define HYP_R     HYPER(R)
-#define HYP_T     HYPER(T)
-#define HYP_A     HYPER(A)
-#define HYP_S     HYPER(S)
-#define HYP_D     HYPER(D)
-#define HYP_F     HYPER(F)
-#define HYP_G     HYPER(G)
-#define HYP_Z     HYPER(Z)
-#define HYP_X     HYPER(X)
-#define HYP_C     HYPER(C)
-#define HYP_V     HYPER(V)
-#define HYP_B     HYPER(B)
+#define HYP_ESC    HYPER(ESC)
+#define HYP_Q      HYPER(Q)
+#define HYP_W      HYPER(W)
+#define HYP_E      HYPER(E)
+#define HYP_R      HYPER(R)
+#define HYP_T      HYPER(T)
+#define HYP_A      HYPER(A)
+#define HYP_S      HYPER(S)
+#define HYP_D      HYPER(D)
+#define HYP_F      HYPER(F)
+#define HYP_G      HYPER(G)
+#define HYP_Z      HYPER(Z)
+#define HYP_X      HYPER(X)
+#define HYP_C      HYPER(C)
+#define HYP_V      HYPER(V)
+#define HYP_B      HYPER(B)
 
 / {
     behaviors {
@@ -236,7 +236,7 @@
             //                                  |          |          |          |          |  |          |          |          |          |
             bindings = <
                 &trans  &trans       &trans       &trans        &trans        &trans                              &trans        &trans        &trans         &trans        &trans        &trans
-                &trans  &kp MY_DOLL  &kp MY_HASH  &kp SQUOTE    &kp DQUOTE    &kp MY_AT                           &kp MY_RCURL  &kp MY_LCURL  &kp MY_EXMARK  &kp MY_QMARK  &kp CIR_FLEX  &kp DEL_WORD
+                &trans  &kp MY_DOLL  &kp MY_HASH  &kp SQUOTE    &kp DQUOTE    &kp MY_AT                           &kp MY_RCURL  &kp MY_LCURL  &kp MY_EXMARK  &kp MY_QMARK  &kp CIR_FLEX  &trans
                 &trans  &trans       &trans       &kp MY_DOT    &kp MY_COM    &kp MY_MIN                          &kp MY_RSQBR  &kp MY_LSQBR  &kp MY_PLS     &kp MY_ASTER  &kp MY_EQUAL  &kp MY_PRC
                 &trans  &trans       &trans       &kp MY_SMCOL  &kp MY_COLON  &kp MY_UNDER  &trans        &trans  &kp MY_RBRKT  &kp MY_LBRKT  &kp MY_RANBR   &kp MY_LANBR  &kp MY_BSLH   &trans
                                      &trans       &trans        &trans        &trans                              &trans        &trans        &trans         &trans
@@ -254,9 +254,9 @@
             //                                  |          |          |          |          |  |          |          |          |          |
             bindings = <
                 &trans  &trans  &trans  &trans  &trans  &trans                        &trans        &trans      &trans     &trans     &trans     &trans
-                &trans  &trans  &trans  &trans  &trans  &trans                        &trans        &trans      &kp UP     &trans     &trans     &trans
-                &trans  &trans  &trans  &trans  &trans  &trans                        &trans        &kp LEFT    &kp DOWN   &kp RIGHT  &trans     &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans        &trans      &trans     &trans      &trans     &trans
+                &trans  &trans  &trans  &trans  &trans  &trans                        &trans        &kp PG_UP   &kp UP     &trans     &trans     &trans
+                &trans  &trans  &trans  &trans  &trans  &trans                        &kp HOME      &kp LEFT    &kp DOWN   &kp RIGHT  &END       &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans        &kp PG_DN   &trans     &trans     &trans     &trans
                                 &trans  &trans  &trans  &trans                        &trans        &trans      &trans     &trans
             >;
 
