@@ -58,22 +58,23 @@
 #define MY_LANBR    LA(LBKT)      // remaped <
 #define MY_RANBR    LA(RBKT)      // remaped >
 
-#define HYP_ESC   LC(LS(LA(ESC)))
-#define HYP_Q     LC(LS(LA(Q)))
-#define HYP_W     LC(LS(LA(W)))
-#define HYP_E     LC(LS(LA(E)))
-#define HYP_R     LC(LS(LA(R)))
-#define HYP_T     LC(LS(LA(T)))
-#define HYP_A     LC(LS(LA(A)))
-#define HYP_S     LC(LS(LA(S)))
-#define HYP_D     LC(LS(LA(D)))
-#define HYP_F     LC(LS(LA(F)))
-#define HYP_G     LC(LS(LA(G)))
-#define HYP_Z     LC(LS(LA(Z)))
-#define HYP_X     LC(LS(LA(X)))
-#define HYP_C     LC(LS(LA(C)))
-#define HYP_V     LC(LS(LA(V)))
-#define HYP_B     LC(LS(LA(B)))
+#define HYPER(key) LC(LS(LA(LG(key))))
+#define HYP_ESC   HYPER(ESC)
+#define HYP_Q     HYPER(Q)
+#define HYP_W     HYPER(W)
+#define HYP_E     HYPER(E)
+#define HYP_R     HYPER(R)
+#define HYP_T     HYPER(T)
+#define HYP_A     HYPER(A)
+#define HYP_S     HYPER(S)
+#define HYP_D     HYPER(D)
+#define HYP_F     HYPER(F)
+#define HYP_G     HYPER(G)
+#define HYP_Z     HYPER(Z)
+#define HYP_X     HYPER(X)
+#define HYP_C     HYPER(C)
+#define HYP_V     HYPER(V)
+#define HYP_B     HYPER(B)
 
 / {
     behaviors {
@@ -83,6 +84,7 @@
             #binding-cells = <0>;
             bindings = <&mt LALT ESC>, <&kp TAB>;
             mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
         };
     };
 
